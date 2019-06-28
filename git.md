@@ -1,3 +1,5 @@
+
+
 # 配置用户信息
 
 1. 针对某个仓库配置用户。。
@@ -25,7 +27,55 @@
 
    `git config --作用域 --unset 要删除的key`。
 
+## 配置连接到github
 
+1. 初始化项目
+
+```shell
+git init
+```
+
+2. 生成SSH文件
+
+```
+ssh-keygen -t rsa -C 'email'
+```
+
+shell输入命令后回车，
+
+* 第一个需要输入的SSH文件的存储地址。
+* 第二个需要输入的为SSH密码。
+* 第三次需要输入的是确认密码。
+* 完成后生成两个文件，一个没后缀，一个后缀为.pub
+
+3. 粘贴key
+
+* 打开.pub后缀的文件，然后把内容复制。
+
+4. github创建SSH链接信息
+
+* 回到github,setting->SSH and GPG key->new SSH key。
+* 输入复制的key，title随便写。
+
+5. 验证是否成功
+
+```shell
+ssh -T git@github.com
+```
+
+
+
+* 回车就会看到：You’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。
+
+6. 建立远程连接
+
+```shell
+git remote add origin git@github.com:yourName/yourRepo.git
+```
+
+* 回车之后即可建立远程连接(上面的地址在刚创建仓库没有上传文件的时候可以在git的提示页面找到)
+
+7. 操作到此完成 然后提交项目即可，项目commit之后需要调用pull进行推送。
 
 # 初始化项目信息
 
