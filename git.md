@@ -75,7 +75,7 @@ git remote add origin git@github.com:yourName/yourRepo.git
 
 * 回车之后即可建立远程连接(上面的地址在刚创建仓库没有上传文件的时候可以在git的提示页面找到)
 
-7. 操作到此完成 然后提交项目即可，项目commit之后需要调用pull进行推送。
+7. 操作到此完成 然后提交项目即可，项目commit之后需要调用push进行推送。
 
 # 初始化项目信息
 
