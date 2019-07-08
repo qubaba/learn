@@ -86,3 +86,11 @@ alter database dbName CHARACTER SET utf8 COLLATE utf8_general_ci;
 show character set 
 ```
 
+# mysql事务
+
+## 事务隔离级别
+
+1. 读未提交： 读到其他会话未提交的事务修改的数据
+2. 读已提交：只能读到已提交事务的数据
+3. 可重复读：同一事务内，查询结果都是事务刚开始的状态。
+4. 序列化
