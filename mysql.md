@@ -50,13 +50,13 @@ mysql -h host -uadmin -padmin -DdbName < path
 # 添加用户并授权
 
 ```mysql
---- host %代表是所以地址都可以访问
+-- host %代表是所以地址都可以访问
 create user 'userName'@'host' identified by 'password'; 
 
---- 授权用户 dbName为*时授权所有数据库，table为*时授权所有表
+-- 授权用户 dbName为*时授权所有数据库，table为*时授权所有表
 grant all privileges on dbName.table to 'userName'@'host' identified by 'password' with grant option;
 
---- 刷新权限
+-- 刷新权限
 flush privileges;
 ```
 
@@ -83,8 +83,21 @@ alter database dbName CHARACTER SET utf8 COLLATE utf8_general_ci;
 ## 查看所有库编码
 
 ```mysql
-show character set 
+show character set;
 ```
+
+```mysql
+-- 查看当前库编码集
+show variables like 'character_set_database';
+```
+
+## 分析Sql执行
+
+```mysql
+explain select * from table
+```
+
+
 
 # mysql事务
 

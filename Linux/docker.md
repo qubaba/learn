@@ -78,3 +78,5 @@ sudo systemctl restart docker
 
 **进入容器:**`docker exec -it 容器Id bash`
 
+**查看系统内核:**`cat /etc/issue`
+
