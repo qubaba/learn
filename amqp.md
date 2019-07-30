@@ -84,25 +84,25 @@ AMQP 四种不同类型的Exchange
 4. 生产消息
 
    ```java
-   	@Autowired
-       RabbitTemplate rabbitTemplate;
+   @Autowired
+   RabbitTemplate rabbitTemplate;
    
-       @Test
-       public void contextLoads() {
+   @Test
+   public void contextLoads() {
    
-           String message = "hello ----------- amqp";
-           rabbitTemplate.convertAndSend(Msg.EXCHANGE_TOPICS_TEST, "info.test", message);
-       }
+       String message = "hello ----------- amqp";
+       rabbitTemplate.convertAndSend(Msg.EXCHANGE_TOPICS_TEST, "info.test", message);
+   }
    ```
 
 5. 消息消费者
 
    ```java
-   	@RabbitListener(queues = Msg.TOPIC_TEST)
-       public void consumerMsg(String message){
+   @RabbitListener(queues = Msg.TOPIC_TEST)
+   public void consumerMsg(String message){
    
-           System.out.println(message);
-       }
+       System.out.println(message);
+   }
    ```
 
    

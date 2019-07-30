@@ -46,7 +46,7 @@ def generate(out, className, fields,table) {
     out.println "package $packageName"
     out.println ""
     out.println "import net.tec.cloud.common.dao.BaseDao;"
-    out.println "import net.zlw.cloud.admin.demo.entity.$className;"
+    out.println "import ${packageName}"
     out.println ""
     Set types = new HashSet()
 
