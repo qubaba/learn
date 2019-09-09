@@ -1,3 +1,9 @@
+[TOC]
+
+
+
+
+
 # 1. 普通配置中心
 
 ## config server
@@ -279,11 +285,11 @@ spring:
 
 # 4. 动态刷新配置中心
 
-# server端保持不变
+## server端保持不变
 
-# 新增项目 config-auto-refresh
+### 新增项目 config-auto-refresh
 
-## POM文件
+### POM文件
 
 ```
 <dependency>
@@ -301,7 +307,7 @@ spring:
 </dependency>
 ```
 
-## 配置类
+### 配置类
 
 新增配置类`AutoConfigRefresh`
 
@@ -370,7 +376,7 @@ public class AutoConfigRefresh implements SchedulingConfigurer {
 
 ```
 
-## 新增spring.factories文件
+### 新增spring.factories文件
 
 在`resources`目录下新建`META-INF`目录，并新增`spring.factories`文件。
 
@@ -383,12 +389,12 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 
 **注意：上面注解用的是在具有某些条件时才生效，所以在引用配置类的配置文件没有需要属性时该配置类不生效。**
 
-# client端
+## client端
 
-## POM文件
+### POM文件
 
 在pom文件中新增对`config-auto-refresh`的依赖。
 
-## 配置文件
+### 配置文件
 
 添加`spring.cloud.refreshInterVal`属性。

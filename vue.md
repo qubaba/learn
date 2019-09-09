@@ -281,9 +281,9 @@ el：当前绑定的DOM元素。
 binding：对象，包含属性
 
    	1. `name`：指令名称。
-   	2. `value`：指令的值，计算后的结果。如：`v-my-directive="1 + 1"` 中绑定的值为`2`。
-   	3. `oldValue`：指令绑定的前一个值，仅在`update`和`componentUpdated`里可用。
-   	4. `expression`：字符串形式的参数。
+      	2. `value`：指令的值，计算后的结果。如：`v-my-directive="1 + 1"` 中绑定的值为`2`。
+         	3. `oldValue`：指令绑定的前一个值，仅在`update`和`componentUpdated`里可用。
+            	4. `expression`：字符串形式的参数。
 
 # 组件定义
 
