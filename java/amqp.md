@@ -23,7 +23,7 @@ AMQP 四种不同类型的Exchange
 1. Fanout Exchange 不管消息的routing Key和消息的头/值是什么，消息都将路由到所有队列。
 2. Direct Exchange 消息的routing Key 与binding的routing Key直接匹配的话，消息将会路由到该队列上。
 3. Topic Exchange 消息的routing Key 与binding的routing Key符合通配符匹配的话，消息将会路由到该队列上。
-4. Header Exchange 如果消息表中的头信息和值都与binding参数表中想匹配，消息将会路由到该队列上。
+4. Header Exchange 如果消息表中的头信息和值都与binding参数表中相匹配，消息将会路由到该队列上。
 
 
 

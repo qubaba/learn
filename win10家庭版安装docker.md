@@ -26,3 +26,8 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
 
 重新执行安装程序即可
 
+```shell
+bcdedit /set hypervisorlaunchtype off
+
+```
+
