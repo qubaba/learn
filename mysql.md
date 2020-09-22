@@ -41,8 +41,8 @@ server-id：服务id，
 # 导入/导出sql
 
 ```mysql
---- 导出
-mysqldump --no-defaults -h host -uadmin -padmin --default-character-set=utf8 dbName > path
+--- 导出 -p后面不用接密码 接了密码会提示命令行后面输入密码不安全
+mysqldump --no-defaults -h host -uadmin -p --default-character-set=utf8 dbName > path
 
 mysql -h host -uadmin -padmin -DdbName < path
 ```
