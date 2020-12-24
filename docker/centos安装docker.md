@@ -18,6 +18,32 @@ sh get-docker.sh --mirror Aliyun
 docker version
 ```
 
+设置开机启动
+
+```shell
+systemctl enbale docker
+```
+
+检查是不是开机启动
+
+```shell
+systemctl is-enabled docker
+```
+
+
+
+# 修改docker 文件存储引擎
+
+在一台宿主机上只能选择一种docker文件存储引擎，修改完成后需要重启docker，修改完成后现有容器和镜像不可用。
+
+修改配置文件`/etc/docker/daemon.json`,没有则新建,
+
+```json
+{
+  "storage-driver": "overlay2" 
+}
+```
+
 
 
 # 设置镜像加速
