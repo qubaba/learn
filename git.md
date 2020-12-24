@@ -89,6 +89,16 @@ git remote add origin git@github.com:yourName/yourRepo.git
 
 切换到需要新建项目的目录下，在cmd执行`git init 项目名`，执行完成后会自动新建项目文件夹。
 
+## 已有项目添加到远程仓库
+
+先在github或者gitee创建仓库，创建完成之后执行语句
+
+```shell
+git remote add projectName git@github.com:yourName/yourRepo.git
+
+git push -u projectName branchName
+```
+
 
 
 
@@ -118,14 +128,10 @@ git remote add origin git@github.com:yourName/yourRepo.git
 
 ## 查看提交日志 log
 
-1. `git log`查看gi提交日志，该命令可以查看git版本提交历史。 
-
+1. `git log`查看git提交日志，该命令可以查看git版本提交历史。 
 2. `git log --oneline`:显示每次提交的文件
-
 3. `git log -n`显示最近提交的n个文件
-
 4. `git log --graph`图形显示历史信息
-
 5. `gitk` 图形界面
 
 ## 分支
