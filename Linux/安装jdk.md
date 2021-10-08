@@ -40,8 +40,7 @@ sudo vi /ect/environment
 
 ```shell
 export JAVA_HOME=/usr/local/java/jdkFileName
-export JRE_HOME=/usr/local/java/jdkFileName/jre
-export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
+export PATH=$PATH:$JAVA_HOME/bin
 ```
 
 配置用户环境变量
@@ -54,8 +53,7 @@ sudo vi /ect/profile
 
 ```shell
 export JAVA_HOME=/usr/local/java/jdkFileName
-export JRE_HOME=/usr/local/java/jdkFileName/jre
-export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
+export PATH=$PATH:$JAVA_HOME/bin
 ```
 
 ### 使环境变量生效
